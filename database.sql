@@ -17,16 +17,6 @@ CREATE TABLE Carreras (
     Descripcion TEXT
 );
 
--- Tabla Intereses
-CREATE TABLE Intereses (
-    ID_Interes INT PRIMARY KEY AUTO_INCREMENT,
-    ID_Estudiante INT,
-    ID_Carrera INT,
-    Nivel_Interes INT,
-    FOREIGN KEY (ID_Estudiante) REFERENCES Estudiantes(ID_Estudiante),
-    FOREIGN KEY (ID_Carrera) REFERENCES Carreras(ID_Carrera)
-);
-
 -- Tabla Resultados_Orientacion
 CREATE TABLE Resultados_Orientacion (
     ID_Resultado INT PRIMARY KEY AUTO_INCREMENT,

@@ -19,8 +19,22 @@ class CarrerasModel{
 
       static async insertar(carrera){
         let db=await connectToMysql();
-        return await db('Carreras').insert(carrera)
+        const result = await db('Carreras').insert(carrera).returning('ID_Carrera');
+        return result[0];
       }
+
+      static async actualizar(id, campos) {
+        let db = await connectToMysql();
+        return await db('Carreras').where('ID_Carrera', id).update(campos);
+    }
+
+    static async reemplazar(id, newData) {
+      let db = await connectToMysql();
+      newData['ID_Carrera'] = id;
+      await db('Carreras').where('ID_Carrera', id).del();
+      await db.insert(newData).into('Carreras');
+      return id;
+  }
 }
 
 module.exports=CarrerasModel;

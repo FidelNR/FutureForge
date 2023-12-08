@@ -17,9 +17,24 @@ class EstudiantesModel{
         return await db("Estudiantes").where('ID_Estudiante',id);
       }
 
-      /*static async insertar(carrera){
-        return await db('Carreras').insert(carrera)
-      }*/
+      static async insertar(estudiante){
+        let db=await connectToMysql();
+        const result = await db('Estudiantes').insert(estudiante).returning('ID_Estudiante');
+        return result[0];
+      }
+
+      static async actualizar(id, campos) {
+        let db = await connectToMysql();
+        return await db('Estudiantes').where('ID_Estudiante', id).update(campos);
+    }
+
+    static async reemplazar(id, newData) {
+      let db = await connectToMysql();
+      newData['ID_Estudiante'] = id;
+      await db('Estudiantes').where('ID_Estudiante', id).del();
+      await db.insert(newData).into('Estudiantes');
+      return id;
+  }
 }
 
 module.exports=EstudiantesModel;
