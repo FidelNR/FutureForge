@@ -35,19 +35,19 @@ de endpoints disponibles con enlaces a sus respectivas documentaciones detallada
 | [`GET /resp_test/{id}`](./resp_test/get-id.md)   | Obtiene la información de una de las respuestas especificada del test. |
 | [`GET /resp_test`](./resp_test/get-all.md)   | Obtiene la información de todas las respuestas del test. |
 | [`POST /resp_test`](./resp_test/post.md)     | Ingresa registros a esta tabla en formato JSON. |
-| [`PATCH /resp_test`](./resp_test/patch.md)     | Actualiza un registro especifico existente de la tabla al indicarle la llave primaria del registro. |
+| [`PATCH /resp_test/{id}`](./resp_test/patch.md)     | Actualiza un registro especifico existente de la tabla al indicarle la llave primaria del registro. |
 
 ### Resultados de tipo de aprendizaje
 | Recurso                    | Descripción |
 | -------------------------- | ----------- |
 | [`GET /res_apre/{id}`](./res_apre/get-id.md)   | Obtiene el resultado especifico del test de tipos de conocimientos de un usuario. |
 | [`GET /res_apre`](./res_apre/get-all.md)   | Obtiene el resultado de todos los test de tipos de conocimientos de un usuario. |
-| [`POST /res_test`](./res_apre/post.md)     | Ingresa registros a esta tabla en formato JSON. |
-| [`PATCH /res_test`](./res_apre/patch.md)     | Actualiza un registro especifico existente de la tabla al indicarle la llave primaria del registro. |
+| [`POST /res_apre`](./res_apre/post.md)     | Ingresa registros a esta tabla en formato JSON. |
+| [`PATCH /res_apre/{id}`](./res_apre/patch.md)     | Actualiza un registro especifico existente de la tabla al indicarle la llave primaria del registro. |
 ### Respuestas de orientador vocacional
 | Recurso                    | Descripción |
 | -------------------------- | ----------- |
-| [`GET /res_ori/{id}`](./endpoints/get-temas-id-libros.md)   | Obtiene el resultado especifico del test de orientacion vocacional de un usuario. |
-| `GET /res_ori`     | Obtiene el resultado de todos los test de orientacion vocacional de un usuario. |
-| `POST /resp_test`     | Ingresa registros a esta tabla en formato JSON. |
-| `PATCH /resp_test`     | Actualiza un registro especifico existente de la tabla al indicarle la llave primaria del registro. |
+| [`GET /res_ori/{id}`](./res_ori/get-id.md)   | Obtiene el resultado especifico del test de orientacion vocacional de un usuario. |
+| [`GET /res_ori`](./res_ori/get-all.md)      | Obtiene el resultado de todos los test de orientacion vocacional de un usuario. |
+| [`POST /res_ori`](./res_ori/post.md)      | Ingresa registros a esta tabla en formato JSON. |
+| [`PATCH /res_ori/{id}`](./res_ori/patch.md)      | Actualiza un registro especifico existente de la tabla al indicarle la llave primaria del registro. |
