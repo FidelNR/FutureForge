@@ -17,9 +17,24 @@ class ResOriModel{
         return await db("Resultados_Orientacion").where('ID_Resultado',id);
       }
 
-      /*static async insertar(carrera){
-        return await db('Carreras').insert(carrera)
-      }*/
+      static async insertar(respuesta){
+        let db=await connectToMysql();
+        const result = await db('Resultados_Orientacion').insert(respuesta).returning('ID_Resultado');
+        return result[0];
+      }
+
+      static async actualizar(id, campos) {
+        let db = await connectToMysql();
+        return await db('Resultados_Orientacion').where('ID_Resultado', id).update(campos);
+    }
+
+    static async reemplazar(id, newData) {
+      let db = await connectToMysql();
+      newData['ID_Resultado'] = id;
+      await db('Resultados_Orientacion').where('ID_Resultado', id).del();
+      await db.insert(newData).into('Resultados_Orientacion');
+      return id;
+  }
 }
 
 module.exports=ResOriModel;

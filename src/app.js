@@ -36,10 +36,16 @@ app.patch('/resp_test/:id([0-9]+)', respuestastestController.itemPatch);
 const resultadosapreController=require('./controllers/resultadosapreControllers');
 app.get('/res_apre',resultadosapreController.indexGet);
 app.get('/res_apre/:id([0-9]+)', resultadosapreController.ItemGet);
+app.post('/res_apre', resultadosapreController.indexPost);
+app.put('/res_apre/:id([0-9]+)', resultadosapreController.itemPut);
+app.patch('/res_apre/:id([0-9]+)', resultadosapreController.itemPatch);
 
 const resoriController=require('./controllers/resoriControllers');
 app.get('/res_ori',resoriController.indexGet);
 app.get('/res_ori/:id([0-9]+)', resoriController.ItemGet);
+app.post('/res_ori', resoriController.indexPost);
+app.put('/res_ori/:id([0-9]+)', resoriController.itemPut);
+app.patch('/res_ori/:id([0-9]+)', resoriController.itemPatch);
 
 app.get('/', function (req, res) {
     res.statusCode = 200;
