@@ -1,4 +1,4 @@
-# Endpoint: `GET /carreras`
+# Endpoint: `GET /resp_test`
 
 Permite obtener todos los registro la tabla.
 
@@ -9,26 +9,29 @@ Permite obtener todos los registro la tabla.
 
 ## Ejemplo de Solicitud
 ```http
-GET /carreras
+GET /resp_test
 ```
 
 ## Respuesta Exitosa (Código 200 OK)
 ```json
 [
-    {
-        "ID_Carrera": 1,
-        "Nombre_Carrera": "Compu",
-        "Descripcion": "Diseño de espacios y construcciones"
+{
+        "ID_Respuesta": 1,
+        "ID_Estudiante": 1,
+        "ID_Pregunta": 1,
+        "Respuesta_Elegida": "S"
     },
     {
-        "ID_Carrera": 2,
-        "Nombre_Carrera": "Psicología",
-        "Descripcion": "Estudio del comportamiento humano"
+        "ID_Respuesta": 2,
+        "ID_Estudiante": 1,
+        "ID_Pregunta": 2,
+        "Respuesta_Elegida": "N"
     },
     {
-        "ID_Carrera": 3,
-        "Nombre_Carrera": "Arquitectura",
-        "Descripcion": "Diseño de espacios y construcciones"
+        "ID_Respuesta": 3,
+        "ID_Estudiante": 2,
+        "ID_Pregunta": 1,
+        "Respuesta_Elegida": "S"
     }
 ]
 ```

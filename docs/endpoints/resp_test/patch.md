@@ -1,4 +1,4 @@
-# Endpoint: `PATCH /preg_test/{id}`
+# Endpoint: `PATCH /resp_test/{id}`
 
 Permite modificar los valores de un registro existente, al incluir la tabla donde esta el registro a modificar y el identificador unico del registro.
 
@@ -9,17 +9,15 @@ Permite modificar los valores de un registro existente, al incluir la tabla dond
 
 ## Ejemplo de Solicitud
 ```http
-PATCH /preg_test/2
+PATCH /resp_test/2
 ```
 
 ## Valor de entrada de Solicitud
 ```json
     {
-        "Texto_Pregunta": "¿Prefieres comer afuera o adentro?",
-        "Opcion_A": "Sí",
-        "Opcion_B": "No",
-        "Opcion_C": "A veces",
-        "Opcion_D": "No tengo idea"
+        "ID_Estudiante": 1,
+        "ID_Pregunta": 1,
+        "Respuesta_Elegida": "S"
     }
 ```
 

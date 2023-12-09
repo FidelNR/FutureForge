@@ -46,7 +46,7 @@ GET /preg_test
 - Código 400 Not Found:
 
     ```
-    No se puede OBTENER /carrera
+    No se puede OBTENER /tabla
     ```
 
 - Código 500 Internal Server Error:
