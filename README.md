@@ -1,7 +1,5 @@
 # API RESTful con Node.js
 
-Proyecto de demostración para clases de desarrollo de APIs utilizando Node.js,
-con implementación en contenedores de Docker.
 Orientador vocacional que aplica un test y arroja los resultados de posibles profesiones que le pueden servir a la persona que lo responda y deductor de tipo de aprendizaje dominantes y sugiere resultados sobre que actividades hacer para mejorar.
 
 ## Tabla de contenido
